@@ -1,2 +1,2 @@
 # Restaurant-Page
-to practice ES6 moduled and webpack thru DOM manipulation by dynamically rendering a restaurant homepage using javascript.
+For practice of ES6 modules and Webpack thru DOM manipulation and dynamically rendering a restaurant homepage using javascript.
