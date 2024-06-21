@@ -5,6 +5,7 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './src/index.js',
+        home: './src/home.js',
       },
     plugins: [
         new HtmlWebpackPlugin({
@@ -18,7 +19,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     },
-    
+    devtool:"source-map",
     devServer:{
         static:{
             directory:path.resolve(__dirname,'dist')

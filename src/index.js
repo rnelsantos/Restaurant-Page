@@ -1,30 +1,55 @@
 import '../styles/main.css' 
-import logo from '../assets/logo.png'
+import { loadHome } from './home';
+import { loadMenu } from './menu';
+import { loadAbout } from './about';
+
 
 
 console.log('Hello');
 
 
+loadHome(); //initial page load
 
-//Create logo and title container div
-const main = document.querySelector('main');
-const logoContainer = document.createElement("div");
-logoContainer.classList.add('full-bleed');
-logoContainer.id = "LogoName";
-main.appendChild(logoContainer);
+const page = (function () {
+const content = document.querySelector("#content");
+const firstChild= document.querySelector(".firstChild")  // apprentlt this only get read  once.
 
-// Add the image to our existing div.
-const myLogo = new Image();
-myLogo.src = logo;
-myLogo.classList.add('logo');
-logoContainer.appendChild(myLogo);
 
-// Add title text
-const piscesTitle = document.createElement('h1');
-piscesTitle.innerText ='Pisces Coffee Hub';
-piscesTitle.classList.add('titleText');
-logoContainer.appendChild(piscesTitle);
+const resetDisplay = () => {if( document.querySelector(".firstChild") != null){content.removeChild(document.querySelector(".firstChild"))}}
 
-//Highlight current page tab
-const home = document.querySelector('#home');
-home.classList.add('select');
+return {resetDisplay}
+
+}
+)();
+
+
+
+
+
+
+
+//event listener for tab pages
+const allNavTabs = document.querySelectorAll("nav");
+allNavTabs.forEach((nav) =>
+nav.addEventListener("click", (e) => {
+ let currentTab = String(e.target.id);
+  console.log(e.target.id);
+
+  switch (currentTab.toLowerCase()) {  
+    case "home":
+        page.resetDisplay();
+        loadHome();
+      break;
+      case "menu":
+        page.resetDisplay();
+        loadMenu();
+      break;
+      case "about":
+        page.resetDisplay();
+        loadAbout();
+      break;
+      default:
+        //
+  };
+})
+);
