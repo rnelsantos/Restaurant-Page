@@ -123,9 +123,19 @@
 
 }
 
+/*Menu*/
+
+
+
+
 /*  UTILITIES */
-#content{
+#content, .firstChild{
+  padding-top:1rem;
   color:white;
+  display:flex;
+  justify-content: center;
+
+
 }
 
 nav{
@@ -147,5 +157,61 @@ nav:hover{
 
 .select{
   background-color: rgba(255, 0, 0, 0.418);
+}
+
+
+
+.switchFood{
+  transition: transform 450ms;
+  color:maroon;
+  position:absolute;
+  background-color:rgba(128, 0, 0, 0.815);
+  height:100%;
+  width:48%;
+  top:1;
+  left:0;
  
 }
+
+.switchDrink{
+  color:maroon;
+  position:absolute;
+  background-color:rgba(128, 0, 0, 0.699);
+  width:55%;
+  top:1;
+  transform:translate(50px);
+  z-index: 0;
+
+}
+
+ .choose-container{
+  background-color:rgba(54, 54, 54, 0.137);
+ 
+  position:relative;
+  z-index:1;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif; 
+  user-select: none;
+  font-weight: 700; 
+  width:7rem;
+  color:gray;
+ }
+ 
+ .option{
+  z-index: 0;
+  color:gray;
+ }
+
+ .chosenMenu{
+  color:white;
+ }
+
+ .menuContainer{
+  border:2px solid red;
+ }
+
+
+

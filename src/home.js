@@ -29,6 +29,36 @@ function loadHome() {
     //Highlight current page tab
     const home = document.querySelector('#home');
     home.classList.add('select');
+
+
+    
     }
 
-    export {loadHome};
+
+    function toggleControl(){
+        //for food/drink toggle switch
+        const chooseOption = document.querySelectorAll(".option");
+        const slide = document.querySelector(".switchFood");
+        
+        
+        chooseOption.forEach((opt) =>
+        opt.addEventListener("click", (e) => {
+          chooseOption.forEach((opt) =>  {opt.classList.remove('chosenMenu');} );
+          let option= e.target.dataset.index;
+          console.log(String(option));
+           
+          if (String(option) === "Drinks" ){
+            slide.classList.add('switchDrink');
+            opt.classList.add('chosenMenu');
+          }
+          else {
+            slide.classList.remove('switchDrink');
+            opt.classList.add('chosenMenu');
+          };
+        
+        })
+        );
+        
+        };
+
+    export {loadHome, toggleControl};

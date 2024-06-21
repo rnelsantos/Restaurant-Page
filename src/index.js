@@ -9,22 +9,7 @@ console.log('Hello');
 
 
 loadHome(); //initial page load
-
-const page = (function () {
-const content = document.querySelector("#content");
-const firstChild= document.querySelector(".firstChild")  // apprentlt this only get read  once.
-
-
-const resetDisplay = () => {if( document.querySelector(".firstChild") != null){content.removeChild(document.querySelector(".firstChild"))}}
-
-return {resetDisplay}
-
-}
-)();
-
-
-
-
+//page.resetDisplay(); //for mock template  html
 
 
 
@@ -43,6 +28,8 @@ nav.addEventListener("click", (e) => {
       case "menu":
         page.resetDisplay();
         loadMenu();
+        page.toggleControl();
+
       break;
       case "about":
         page.resetDisplay();
@@ -53,3 +40,92 @@ nav.addEventListener("click", (e) => {
   };
 })
 );
+
+function loadToggle(){
+//for food/drink toggle switch
+const chooseOption = document.querySelectorAll(".option");
+const slide = document.querySelector(".switchFood");
+
+
+chooseOption.forEach((opt) =>
+opt.addEventListener("click", (e) => {
+  chooseOption.forEach((opt) =>  {opt.classList.remove('chosenMenu');} );
+  let option= e.target.dataset.index;
+  console.log(String(option));
+   
+  if (String(option) === "Drinks" ){
+    slide.classList.add('switchDrink');
+    opt.classList.add('chosenMenu');
+  }
+  else {
+    slide.classList.remove('switchDrink');
+    opt.classList.add('chosenMenu');
+  };
+
+})
+);
+
+};
+
+const page = (function () {
+  const content = document.querySelector("#content");
+  const firstChild= document.querySelector(".firstChild")  // apprently this only get read  once.
+
+  
+  
+  const resetDisplay = () => {if( document.querySelector(".firstChild") != null){content.removeChild(document.querySelector(".firstChild"))}}
+  
+  const toggleControl = () => {
+    const chooseOption = document.querySelectorAll(".option");
+    const slide = document.querySelector(".switchFood");
+    chooseOption.forEach((opt) =>
+      opt.addEventListener("click", (e) => {
+        chooseOption.forEach((opt) =>  {opt.classList.remove('chosenMenu');} );
+        let option= e.target.dataset.index;
+        console.log(String(option));
+          if (String(option) === "Drinks" ){
+            slide.classList.add('switchDrink');
+            opt.classList.add('chosenMenu')}
+          else {
+            slide.classList.remove('switchDrink');
+            opt.classList.add('chosenMenu')};      
+      })
+      );
+  }
+
+  return {resetDisplay,toggleControl}
+  
+  }
+  )();
+
+
+
+
+/*
+  function loadToggle(){
+    //for food/drink toggle switch
+    const chooseOption = document.querySelectorAll(".option");
+    const slide = document.querySelector(".switchFood");
+    
+    
+    chooseOption.forEach((opt) =>
+    opt.addEventListener("click", (e) => {
+      chooseOption.forEach((opt) =>  {opt.classList.remove('chosenMenu');} );
+      let option= e.target.dataset.index;
+      console.log(String(option));
+       
+      if (String(option) === "Drinks" ){
+        slide.classList.add('switchDrink');
+        opt.classList.add('chosenMenu');
+      }
+      else {
+        slide.classList.remove('switchDrink');
+        opt.classList.add('chosenMenu');
+      };
+    
+    })
+    );
+    
+    };
+
+    */
