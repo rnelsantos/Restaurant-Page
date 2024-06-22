@@ -182,10 +182,11 @@ nav:hover{
     flex-direction: row;
     align-items: center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color:rgb(255, 255, 255);
-    height:100vh;
+    height:90vh;
     gap:20px;
+  
   }
 
   .titleText{
@@ -193,14 +194,12 @@ nav:hover{
   }
 
   .logo{
-    height: 200px;
-    width: 200px;
+    height: 350px;
+    width: 350px;
     shadow:3px 5px 2px #290909d7, 6px 5px 12px rgb(0, 0, 0);
-    
-
   }
 
-  @media only screen and (max-width: 600px) { /*   small screen remove naav bar              */
+  @media only screen and (max-width: 650px) { /*   small screen remove naav bar              */
     .input-form{
         display:flex;
         flex-direction: column;
@@ -229,6 +228,11 @@ nav:hover{
         height:100vh;
         gap:20px;
         text-align:center;
+      }
+      .logo{
+        height: 200px;
+        width: 200px;
+        shadow:3px 5px 2px #290909d7, 6px 5px 12px rgb(0, 0, 0);
       }
 
       nav{

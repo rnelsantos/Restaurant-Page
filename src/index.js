@@ -5,11 +5,8 @@ import { loadAbout } from './about';
 
 
 
-console.log('Hello');
 
-loadAbout();
-//loadHome(); //initial page load
-//page.resetDisplay(); //for mock template  html
+loadHome(); 
 
 
 
