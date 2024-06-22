@@ -105,6 +105,7 @@ foodArray.forEach(function(menuURL) {
 //Load drinksMenu images at food folder
 const drinksMenu = document.createElement("div");
 drinksMenu.classList.add('drinksMenu');
+drinksMenu.classList.add('hide');
 
 drinksArray.forEach(function(menuURL) {
     const menuIMG = new Image();
