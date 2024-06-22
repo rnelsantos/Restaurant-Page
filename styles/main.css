@@ -45,98 +45,28 @@
   }
 
 
-
-/* HOME */
-  header {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-    background-color: rgb(19, 19, 19);
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    
-  }
-
-  main{
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../assets/coffeeBG.jpg');
-    background-size: cover;
-    background-position:center;
-    background-attachment:fixed;
-  }
-
-
-  #LogoName{
-    display: flex;
-    align-items: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2.5rem;
-    color:rgb(255, 255, 255);
-    height:100vh;
-    gap:20px;
-  }
-
-  .titleText{
-    text-shadow: 3px 5px 2px #290909d7, 6px 5px 12px rgb(0, 0, 0);
-  }
-
-  .logo{
-    height: 200px;
-    width: 200px;
-    shadow:3px 5px 2px #290909d7, 6px 5px 12px rgb(0, 0, 0);
-    
-
-  }
-
-  @media only screen and (max-width: 600px) { /*   small screen remove naav bar              */
-    .input-form{
-        display:flex;
-        flex-direction: column;
-       
-        gap:5px;
-        width:100%;
-      }
-
-      #datePicker{
-        align:Center;
-        display:flex;
-        flex-direction:column ;
-        justify-content: space-around;
-        gap:10px;
-        align-items: center;
-      }
-
-      #LogoName{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 1.5rem;
-        color:rgb(255, 255, 255);
-        height:100vh;
-        gap:20px;
-        text-align:center;
-      }
-
+/*  UTILITIES */
+html,body 
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
-/*Menu*/
-
-
-
-
-/*  UTILITIES */
 #content, .firstChild{
   padding-top:1rem;
   color:white;
   display:flex;
+  align-items: center;
   justify-content: center;
-
-
+  flex-direction:column;
+  width:100vw;
+  gap:10px;
+ overflow-x:
 }
+
 
 nav{
   padding-left:30px; 
@@ -212,6 +142,130 @@ nav:hover{
  .menuContainer{
   border:2px solid red;
  }
+
+
+
+
+
+/* HOME */
+  header {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: rgb(19, 19, 19);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    width:100%;
+  }
+
+  nav{
+    text-align: center;
+    min-width: 100px;
+    flex-basis: auto;
+    flex-shrink: 1;
+  }
+
+  main{
+    width: 100%;
+    height: auto;
+    min-height:100vh;
+    background-image: url('../assets/coffeeBG.jpg');
+    background-size: cover;
+    background-position:center;
+    background-attachment:fixed;
+  }
+
+
+  #LogoName{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.5rem;
+    color:rgb(255, 255, 255);
+    height:100vh;
+    gap:20px;
+  }
+
+  .titleText{
+    text-shadow: 3px 5px 2px #290909d7, 6px 5px 12px rgb(0, 0, 0);
+  }
+
+  .logo{
+    height: 200px;
+    width: 200px;
+    shadow:3px 5px 2px #290909d7, 6px 5px 12px rgb(0, 0, 0);
+    
+
+  }
+
+  @media only screen and (max-width: 600px) { /*   small screen remove naav bar              */
+    .input-form{
+        display:flex;
+        flex-direction: column;
+       
+        gap:5px;
+        width:100%;
+      }
+
+      #datePicker{
+        align:Center;
+        display:flex;
+        flex-direction:column ;
+        justify-content: space-around;
+        gap:10px;
+        align-items: center;
+      }
+
+      #LogoName{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.5rem;
+        color:rgb(255, 255, 255);
+        height:100vh;
+        gap:20px;
+        text-align:center;
+      }
+
+      nav{
+       font-size: 1rem;
+      }
+
+}
+
+/*Menu*/
+.foodMenu{
+  display:grid;
+  width:90%;
+  grid-template-columns:repeat(auto-fit, minmax(300px,2fr));
+  grid-auto-rows: repeat( 1fr);
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  max-width:1200px;
+  justify-items:stretch;
+}
+
+.drinksMenu{
+  display:grid;
+  width:90%;
+  grid-template-columns:repeat(auto-fit, minmax(300px,2fr));
+  grid-auto-rows: repeat( 1fr);
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  max-width:1200px;
+  justify-items:stretch;
+}
+
+.hide{
+  display:none;
+}
+
 
 
 

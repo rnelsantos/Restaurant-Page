@@ -75,6 +75,21 @@ const page = (function () {
   
   const resetDisplay = () => {if( document.querySelector(".firstChild") != null){content.removeChild(document.querySelector(".firstChild"))}}
   
+  const toggleFood = () => {
+    const foodMenu = document.querySelector(".foodMenu");
+    const drinksMenu = document.querySelector(".drinksMenu");
+    foodMenu.classList.remove('hide')
+    drinksMenu.classList.add('hide')
+  }
+
+  const toggleDrinks = () => {
+    const foodMenu = document.querySelector(".foodMenu");
+    const drinksMenu = document.querySelector(".drinksMenu");
+    foodMenu.classList.add('hide')
+    drinksMenu.classList.remove('hide')
+  }
+
+
   const toggleControl = () => {
     const chooseOption = document.querySelectorAll(".option");
     const slide = document.querySelector(".switchFood");
@@ -85,15 +100,18 @@ const page = (function () {
         console.log(String(option));
           if (String(option) === "Drinks" ){
             slide.classList.add('switchDrink');
-            opt.classList.add('chosenMenu')}
-          else {
+            opt.classList.add('chosenMenu')
+            page.toggleDrinks()};
+          if(String(option) === "Food"){
             slide.classList.remove('switchDrink');
-            opt.classList.add('chosenMenu')};      
+            opt.classList.add('chosenMenu')
+            page.toggleFood(); };
+                
       })
       );
   }
 
-  return {resetDisplay,toggleControl}
+  return {resetDisplay,toggleControl,toggleFood,toggleDrinks }
   
   }
   )();

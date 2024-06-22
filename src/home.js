@@ -35,7 +35,7 @@ function loadHome() {
     }
 
 
-    function toggleControl(){
+    function toggleCont(){
         //for food/drink toggle switch
         const chooseOption = document.querySelectorAll(".option");
         const slide = document.querySelector(".switchFood");
@@ -61,4 +61,4 @@ function loadHome() {
         
         };
 
-    export {loadHome, toggleControl};
+    export {loadHome};
