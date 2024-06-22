@@ -83,7 +83,7 @@ function loadAbout() {
      const branch8 = document.createElement('p')
      const branch9 = document.createElement('p')
      branch6.innerText = "PISCES COFFEE HUB MANGATAREM"
-     branch7.innerText = "𝗟𝗼𝗰𝗮𝘁𝗶𝗼𝗻: ʀᴏʏᴀʟ ᴘᴀʟᴍ ᴄᴇɴᴛᴇʀ, ᴘᴏɢᴏɴʟᴏᴍʙᴏʏ ᴍᴀɴɢᴀᴛᴀʀᴇᴍ"
+     branch7.innerText = "📍𝗟𝗼𝗰𝗮𝘁𝗶𝗼𝗻: ʀᴏʏᴀʟ ᴘᴀʟᴍ ᴄᴇɴᴛᴇʀ, ᴘᴏɢᴏɴʟᴏᴍʙᴏʏ ᴍᴀɴɢᴀᴛᴀʀᴇᴍ"
      branch8.innerText = "🕗 ꜱᴛᴏʀᴇ ʜᴏᴜʀꜱ: 9ᴀᴍ ᴛᴏ 9ᴘᴍ ᴅᴀɪʟʏ"
      branch9.innerText = "📱𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐍𝐮𝐦𝐛𝐞𝐫: 𝟬𝟵𝟯𝟭𝟴𝟲𝟮𝟵𝟱𝟲𝟯"
      branchDiv2.appendChild(branch6);
